@@ -1,13 +1,272 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+a {
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.card-form {
+  max-width: 570px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.card-form__inner {
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 10px;
+  padding: 20px 40px;
+}
+
+.single_card {
+  display: flex;
+}
+
+.card-item {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 178px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 25px;
+  align-items: start;
+  text-align: left;
+}
+
+.card_background {
+  background: linear-gradient(
+    131deg,
+    rgba(205, 218, 255, 1) 0%,
+    rgba(17, 81, 211, 1) 53%
+  );
+  z-index: 5;
+}
+
+.card_bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.label_currency {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555770;
+}
+
+.currency_block {
+  display: flex;
+  margin: 10px 0 25px 0;
+  color: #fafafc;
+  max-width: 288px;
+}
+
+.first_currency_wrap,
+.second_currency_wrap {
+  position: relative;
+}
+
+.currency_svg {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.arrow {
+  right: 0;
+}
+
+.currency_block input {
+  width: 100%;
+  height: 52px;
+  background-color: #fafafc;
+  color: #555770;
+  border: 1px solid #e4e4eb;
+}
+
+.card_list_block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.card_lists {
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card_list_item {
+  background-color: #6698fa;
+  width: 96px;
+  min-height: 51px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 13px;
+  border-radius: 10px;
+  margin: 0 0 17px 0;
+  gap: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.card_list_item:active,
+.card_list_item:focus {
+  border: 2px solid #1151d3;
+}
+
+.new_card:active,
+.new_card:focus {
+  border: 2px solid #1151d3;
+}
+
+.new_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f5;
+  cursor: pointer;
+  color: black;
+  margin-bottom: 17px;
+  border: 2px solid transparent;
+}
+
+.new_card img {
+  width: 30px;
+}
+
+.first_currency {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.second_currency {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.first_currency.error {
+  border: 1px solid red;
+}
+.card_bubble img {
+  height: 100%;
+}
+
+.card_number_form {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card_number_form,
+.expiry_form {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card-item label {
+  color: white;
+  font-size: 16px;
+}
+
+.gap {
+  margin: 0 10px;
+  color: white;
+}
+
+.expiry_date,
+.expiry_month {
+  width: 50px;
+}
+
+.cvv_block {
+  width: 40%;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: -10px;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 20px;
+  background-color: #dbdbe0;
+  justify-content: start;
+}
+
+.top_line {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: -20px;
+  height: 40px;
+  width: 140%;
+  background-color: #e0e1e9;
+}
+
+.label_cvv {
+  color: #555770 !important;
+  font-size: 12px;
+}
+
+.cvv {
+  margin-top: 10px;
+  max-width: 72px;
+}
+
+.info_cvv {
+  margin-top: 15px;
+  color: #555770;
+  font-size: 12px;
+}
+
+.terms_block {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.terms_check {
+  display: inline-flex;
+  align-items: center;
+}
+
+.terms {
+  margin-left: 12px;
+}
+
+.submit {
+  background-color: #3e7bfa;
+  padding: 15px 40px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
 }
