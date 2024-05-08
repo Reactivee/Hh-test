@@ -1,5 +1,6 @@
 a {
   text-decoration: none;
+  color: #1151d3;
 }
 
 input {
@@ -251,9 +252,12 @@ input[type="number"] {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-
 .terms_check {
   display: inline-flex;
+}
+.terms_text {
+  display: inline-flex;
+  color: #555770;
   align-items: center;
 }
 

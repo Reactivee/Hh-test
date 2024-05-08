@@ -215,13 +215,13 @@ const BankCardForm = () => {
                 />
 
                 <div className="terms">
-                  <span className="terms_check">
+                  <span className="terms_text">
                     Запомнить эту карту. Это безопасно.{" "}
                     <img src={terms} alt="terms" />{" "}
                   </span>
                   <span>
                     <br />
-                    <span>
+                    <span className="terms_text">
                       Сохраняя карту, вы соглашаетесь с
                       <a href="#"> условиями привязки карты.</a>
                     </span>
@@ -234,7 +234,7 @@ const BankCardForm = () => {
             </div>
 
             <button className="submit" type="submit">
-              Add Card
+              Оплатить
             </button>
           </form>
         </div>
