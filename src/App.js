@@ -1,10 +1,10 @@
 import "./App.css";
-import BankCardForm from "./components/BankCardForm";
+import Container from "./components/Container";
 
 function App() {
   return (
     <div className="App">
-      <BankCardForm />
+      <Container />
     </div>
   );
 }

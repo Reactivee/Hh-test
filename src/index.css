@@ -9,7 +9,7 @@ a {
 
 input {
   height: 38px;
-  padding: 0 10px;
+  padding:  0 0 0 10px;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -92,6 +92,7 @@ input[type="number"] {
 .first_currency_wrap,
 .second_currency_wrap {
   position: relative;
+  width: 50%;
 }
 
 .currency_svg {
