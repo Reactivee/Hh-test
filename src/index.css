@@ -28,14 +28,14 @@ input[type="number"] {
   max-width: 570px;
   margin: 0 auto;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .card-form__inner {
   background: #fff;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   border-radius: 10px;
-  padding: 20px 40px;
+  padding:  40px;
 }
 
 .single_card {
@@ -131,7 +131,7 @@ input[type="number"] {
 
 .card_list_item {
   background-color: #6698fa;
-  width: 96px;
+  width: 95px;
   min-height: 51px;
   display: flex;
   flex-direction: column;
@@ -142,6 +142,7 @@ input[type="number"] {
   gap: 6px;
   cursor: pointer;
   border: 2px solid transparent;
+  font-size: 14px;
 }
 
 .card_list_item:active,
