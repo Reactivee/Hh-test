@@ -39,6 +39,7 @@ const BankCardForm = () => {
     try {
       const response = await axios.post(`${mainRoute}/cards/bank-cards`, data);
       fetchBankCards();
+      reset();
     } catch (error) {
       setError(error.message);
       console.error("Error creating bank card:", error.message);
