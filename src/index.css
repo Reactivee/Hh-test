@@ -292,6 +292,7 @@ input[type="number"] {
   .cvv_block {
     margin-top: -100px;
     margin-left: 0;
+    padding: 20px;
   }
   .card_list_item {
     width: 83px;
@@ -304,5 +305,8 @@ input[type="number"] {
   }
   .cvv {
     margin-right: 15px;
+  }
+  .info_cvv{
+    width: 40%;
   }
 }
