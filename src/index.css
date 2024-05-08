@@ -1,3 +1,7 @@
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
 a {
   text-decoration: none;
   color: #1151d3;
@@ -198,7 +202,7 @@ input[type="number"] {
 
 .card-item label {
   color: white;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .gap {
@@ -212,17 +216,18 @@ input[type="number"] {
 }
 
 .cvv_block {
-  width: 40%;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  margin-left: -10px;
+  width: 45%;
+  margin-left: -25px;
   z-index: 1;
-  padding-left: 30px;
-  padding-right: 20px;
+  padding-left: 42px;
+  padding-right: 10px;
   background-color: #dbdbe0;
   justify-content: start;
 }
-
+.cvv_input_wrap {
+  display: flex;
+  flex-direction: column;
+}
 .top_line {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -243,10 +248,9 @@ input[type="number"] {
 }
 
 .info_cvv {
-  
   margin-top: 15px;
   color: #555770;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .terms_block {
@@ -257,9 +261,8 @@ input[type="number"] {
   display: inline-flex;
 }
 .terms_text {
-  display: inline-flex;
   color: #555770;
-  align-items: center;
+  font-size: 14px;
 }
 
 .terms {
@@ -274,4 +277,31 @@ input[type="number"] {
   border-radius: 25px;
   border: none;
   cursor: pointer;
+}
+@media only screen and (max-width: 420px) {
+  .single_card {
+    flex-direction: column;
+  }
+  .card-item {
+    width: auto;
+  }
+  .card-form__inner {
+    padding: 20px;
+  }
+  .cvv_block {
+    margin-top: -100px;
+    margin-left: 0;
+  }
+  .card_list_item {
+    width: 83px;
+  }
+  .label_cvv {
+    margin-top: 40px;
+  }
+  .cvv_input_wrap {
+    flex-direction: row;
+  }
+  .cvv {
+    margin-right: 15px;
+  }
 }

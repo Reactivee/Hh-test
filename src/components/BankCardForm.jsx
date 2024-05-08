@@ -183,27 +183,30 @@ const BankCardForm = () => {
 
               <div className="cvv_block card-item">
                 <div className="top_line"></div>
+
                 <label className="label_cvv" htmlFor="cvv">
                   CVV/CVC
                 </label>
-                <input
-                  type="number"
-                  id="cvv"
-                  className="cvv"
-                  placeholder="000"
-                  {...register("cvv", {
-                    required: true,
-                    minLength: 3,
-                    maxLength: 3,
-                    pattern: /^\d+$/,
-                  })}
-                />
-                <span className="info_cvv">
-                  три цифры с обратной стороны карты
-                </span>
-                {errors.cvv && (
-                  <span style={{ color: "red" }}>CVV must be 3 digits</span>
-                )}
+                <div className="cvv_input_wrap">
+                  <input
+                    type="number"
+                    id="cvv"
+                    className="cvv"
+                    placeholder="000"
+                    {...register("cvv", {
+                      required: true,
+                      minLength: 3,
+                      maxLength: 3,
+                      pattern: /^\d+$/,
+                    })}
+                  />
+                  <span className="info_cvv">
+                    три цифры с обратной стороны карты
+                  </span>
+                  {errors.cvv && (
+                    <span style={{ color: "red" }}>CVV must be 3 digits</span>
+                  )}
+                </div>
               </div>
             </div>
             <div className="terms_block">
@@ -220,12 +223,11 @@ const BankCardForm = () => {
                     Запомнить эту карту. Это безопасно.{" "}
                     <img src={terms} alt="terms" />{" "}
                   </span>
-                  <span>
-                    <br />
-                    <span className="terms_text">
-                      Сохраняя карту, вы соглашаетесь с
-                      <a href="#"> условиями привязки карты.</a>
-                    </span>
+
+                  <br />
+                  <span className="terms_text">
+                    Сохраняя карту, вы соглашаетесь с
+                    <a href="#"> условиями привязки карты.</a>
                   </span>
                   {errors.agree && (
                     <span style={{ color: "red" }}>Mark please</span>
